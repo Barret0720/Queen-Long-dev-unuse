@@ -1,0 +1,14 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import './utils/variables';
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import './utils/utilities';
+
+@import './layout/nav.scss';
+@import './layout/footer.scss';
+
+@import './utils/comm.scss';
+@import './pages/index.scss';
+@import './pages/about.scss';
+
+@import '../../node_modules/bootstrap';

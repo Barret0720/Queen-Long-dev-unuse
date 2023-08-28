@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media | Hylas</title>
+  </head>
+  <body>
+    <%- include('./layout/nav'); -%>
+    <main class="media text-center">
+      <section class="title mt-7 w-100 d-flex justify-content-center mb-4">
+        <div class="col-8 text-center">
+          <img src="/assets/images/media_header.png" class="img-fluid" alt="">
+        </div>
+      </section>
+      <section class="mb-2">
+        <ul class="list-unstyled row g-3">
+          <li class="col-12 col-md-6 position-relative"><a href="media_list.html"><img src="/assets/images/media_News.png" class="img-fluid" alt=""><p class="position-absolute p-1 fs-3 list-title">News</p></a></li>
+          <li class="col-12 col-md-6 position-relative"><a href="media_list.html"><img src="/assets/images/media_show.png" class="img-fluid" alt=""><p class="position-absolute p-1 fs-3 list-title">Boat Show</p></a></li>
+          <li class="col-12 position-relative"><a href="media_list.html"><img src="/assets/images/media_Articles.png" class="img-fluid" alt=""><p class="position-absolute p-1 fs-3 list-title">Articles</p></a></li>
+          <li class="col-12 col-md-6 position-relative"><a href="media_list.html"><img src="/assets/images/media_News2.png" class="img-fluid" alt=""><p class="position-absolute p-1 fs-3 list-title">Press News</p></a></li>
+          <li class="col-12 col-md-6 position-relative"><a href="media_list.html" class="position-relative"><img src="/assets/images/media_videos.png" class="img-fluid" alt=""><img class="position-absolute top-50 start-50 translate-middle" src="/assets/images/video_icon.png" alt=""><p class="position-absolute p-1  fs-3 list-title">Videos</p></a></li>
+        </ul>
+      </section>
+    </main>
+    <%- include('./layout/jspackage'); -%> 
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+    <style>
+      .list-title{
+        bottom: 0;
+    color: white;
+    background-color: rgb(0 0 0 / 38%);
+      }
+    </style>
+  </body>
+</html>
