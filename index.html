@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>QUEEN LONG MARINE | CUSTOMIZATION</title>
-    <script type="module" crossorigin src="/Queen-Long-dev/assets/sail_single-ee586158.js"></script>
-    <link rel="stylesheet" href="/Queen-Long-dev/assets/sail_single-d8e63f88.css">
+    <script type="module" crossorigin src="/Queen-Long-dev/assets/sail_single-3eb28cc4.js"></script>
+    <link rel="stylesheet" href="/Queen-Long-dev/assets/sail_single-4b3506f2.css">
   </head>
   <body>
     <nav class="navbar bg-transparent fixed-top" aria-label="First navbar">
@@ -237,8 +237,11 @@
               SAILING<span class="ms-1 text-success">FLEET</span>
             </h2>
             <div class="col-7 col-md-5 me-md-7 mb-2 d-none d-md-block">
-              <h3 class="text-third fw-bolder fs-md-2">Our Heritage</h3>
-              <p class="fs-5">For over 40 years, Queen Long Marine has created innovative yachts under the Hylas brand from the designs of Sparkman & Stephens, Germán Frers, Bill Dixon and Dean Salthouse. Many have been award winners, both for their beauty and build quality.</p>
+              <h3 class="text-third fw-bolder fs-md-2 fm-serif">Our Heritage</h3>
+              <p class="fs-5 fm-serif" style="background-color: #fff6;
+              padding: 8px;
+              border-radius: 8px;
+          ">For over 40 years, Queen Long Marine has created innovative yachts under the Hylas brand from the designs of Sparkman & Stephens, Germán Frers, Bill Dixon and Dean Salthouse. Many have been award winners, both for their beauty and build quality.</p>
             </div>
           </div>
         </div>
@@ -255,7 +258,7 @@
           />
         </div>
       </section>
-      <div class="bg-1 mb-0">
+      <div class="bg-1 mb-0 mb-md-4">
         <section
           data-bgcolor="#ffffff"
           class="gsap-section mb-0 position-relative"
@@ -446,10 +449,10 @@
         </section>
         <section
           data-bgcolor="linear-gradient(180deg, rgba(2,53,75,1) 0%, rgba(213,164,113,1) 40%, rgba(77,34,24,1) 100%)"
-          class="gsap-section h-v100 bottom-slide position-relative mb-3 mb-md-0"
+          class="gsap-section h-v100 bottom-slide position-relative mb-3 mb-md-2"
         >
           <img
-            src="/Queen-Long-dev/assets/bg8-3871a4b8.png"
+            src="/Queen-Long-dev/assets/bg8-760dadbb.png"
             class="img-fluid position-relative position-absolute z-n1 img-hv100"
             style="height: 100%;"
             srcset=""
@@ -704,18 +707,20 @@
   </ul>
 </div>
 <div class="navCtrl">
+  <div class="logo-area">
+    <div class="nav-logo nav-light">
+      <a href="#">
+        <img
+          src="/Queen-Long-dev/assets/logo_4-c27161eb.png"
+          style="width: 8vw !important; margin-top: 30px; height: unset"
+      /></a>
+    </div>
 
-
-<div class="logo-area">
-  <div class="nav-logo nav-light">
-  <img src="/Queen-Long-dev/assets/logo_4-c27161eb.png"  style="width: 8vw !important; margin-top:30px; height:unset;"/>
+    <div class="nav-logo nav-derk">
+      <a href="#"><img src="/Queen-Long-dev/assets/logo_4_dark-d90a9d41.png" /></a>
+    </div>
+  </div>
 </div>
-
-<div class="nav-logo nav-derk">
-  <img src="/Queen-Long-dev/assets/logo_4_dark-d90a9d41.png" />
-</div>
-</div></div>
-
 
 <script>
   const indexEle = document.querySelector(".index");
@@ -727,7 +732,7 @@
     darkLogo.style.visibility = "hidden";
   }
   window.onload = function () {
-  const footerEle = document.querySelector(".footer");
+    const footerEle = document.querySelector(".footer");
     const footerHeight = footerEle.scrollHeight;
     const allHeight = document.body.scrollHeight;
     const navLogo = document.querySelector(".logo-area");
@@ -741,8 +746,7 @@
         navLogo.style.visibility = "visible";
       }
     };
-
-  };    
+  };
 
   const connectIcon = document.querySelector(".connectIcon");
   const connectIcons = document.querySelector(".connectIcons");
@@ -768,14 +772,14 @@
   $(window).scroll(function () {
     currentVal = scrollVal;
     scrollVal = $(window).scrollTop();
-    if(currentVal < scrollVal) {
+    if (currentVal < scrollVal) {
       navCtrlEle.style.display = "none";
       navBarElm.style.visibility = "hidden";
-    }else{
+    } else {
       navCtrlEle.style.display = "block";
       navBarElm.style.visibility = "visible";
     }
-  })
+  });
 </script>
     
 
