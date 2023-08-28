@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>QUEEN LONG MARINE | CUSTOMIZATION</title>
-    <script type="module" crossorigin src="/Queen-Long-dev/assets/sail_single-cc42ee77.js"></script>
-    <link rel="stylesheet" href="/Queen-Long-dev/assets/sail_single-07285193.css">
+    <script type="module" crossorigin src="/Queen-Long-dev/assets/sail_single-5dce9e9e.js"></script>
+    <link rel="stylesheet" href="/Queen-Long-dev/assets/sail_single-556e9ebb.css">
   </head>
   <body>
     <nav class="navbar bg-transparent fixed-top" aria-label="First navbar">
@@ -193,9 +193,9 @@
                 <div class="videobox">
                   <iframe
                     frameborder="0"
-                    src="https://www.youtube.com/embed/OcRKoKrWCbE?controls=0&autoplay=1&mute=1&loop=1"
+                    src="https://www.youtube.com/embed/OcRKoKrWCbE?controls=0&autoplay=1&mute=1&loop=1&playlist=OcRKoKrWCbE"
                     frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; loop"
                     allowfullscreen
                   >
                   </iframe>
@@ -413,18 +413,18 @@
             <div
               class="position-absolute col-10 top-0 start-0 h-100 z-n1 family-slider"
             >
-            <div class="slide-video">
-              <div class="videobox">
-                <iframe
-                  frameborder="0"
-                  src="https://www.youtube.com/embed/LFVO0n7aeJw?controls=0&autoplay=1&mute=1&loop=1"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                >
-                </iframe>
+              <div class="slide-video">
+                <div class="videobox">
+                  <iframe
+                    frameborder="0"
+                    src="https://www.youtube.com/embed/LFVO0n7aeJw?controls=0&autoplay=1&mute=1&loop=1&playlist=LFVO0n7aeJw"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; loop"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
               </div>
-            </div>
             </div>
           </div>
         </section>
@@ -515,11 +515,15 @@
             <div class="position-relative">
               <img src="/Queen-Long-dev/assets/area7_hero-c8a520f3.png" class="img-fluid" />
               <div class="col-md-6 co-9 position-absolute bottom-0 end-0 z-3">
-                <p class="fw-medium text-white fm-serif fs-md-4 fs-7 typewriter">
+                <p class="fire-word-hidden d-none">
+                  <!-- 打字機文本內容 -->
                   We have all your yachting requirements in hand. Together with
                   your captain and crew, we reduce the risk and increase the
                   enjoyment.
                 </p>
+                <p
+                  class="fw-medium text-white fm-serif fs-md-4 fs-7 typewriter"
+                ></p>
               </div>
             </div>
           </div>
@@ -940,7 +944,6 @@
           return i;
         }
       }
-
     </script>
 
     <script>
@@ -990,25 +993,32 @@
       }, 5000);
     </script>
     <script>
-      const text = "We have all your yachting requirements in hand. Together with your captain and crew, we reduce the risk and increase the enjoyment.";
-const typewriter = document.querySelector('.typewriter');
+      const fireWordEle = document.querySelector(".fire-word-hidden");
+      const typewriter = document.querySelector(".typewriter");
+      const text = fireWordEle.textContent.trim();
 
-function typeText() {
-    typewriter.textContent = ''; // 清空容器
-    let index = 0;
+      function typeText() {
+        typewriter.textContent = ""; // 清空容器
+        let index = 0;
 
-    function addNextChar() {
-        typewriter.textContent += text[index];
-        index++;
-        if (index < text.length) {
-            setTimeout(addNextChar, 50); // 50毫秒后添加下一个字符
+        function addNextChar() {
+          typewriter.textContent += text[index];
+          index++;
+          if (index < text.length) {
+            setTimeout(addNextChar, 50);
+          } else {
+            setTimeout(() => {
+              index = 0;
+              typewriter.textContent = "";
+              typeText();
+            }, 3000);
+          }
         }
-    }
 
-    addNextChar();
-}
+        addNextChar();
+      }
 
-typeText(); // 开始打字机效果
+      typeText(); // 开始打字机效果
     </script>
   </body>
 </html>
