@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>QUEEN LONG MARINE | CUSTOMIZATION</title>
-    <script type="module" crossorigin src="/Queen-Long-dev/assets/sail_single-831d0438.js"></script>
-    <link rel="stylesheet" href="/Queen-Long-dev/assets/sail_single-b2a8329f.css">
+    <script type="module" crossorigin src="/Queen-Long-dev/assets/sail_single-cc42ee77.js"></script>
+    <link rel="stylesheet" href="/Queen-Long-dev/assets/sail_single-07285193.css">
   </head>
   <body>
     <nav class="navbar bg-transparent fixed-top" aria-label="First navbar">
@@ -515,7 +515,7 @@
             <div class="position-relative">
               <img src="/Queen-Long-dev/assets/area7_hero-c8a520f3.png" class="img-fluid" />
               <div class="col-md-6 co-9 position-absolute bottom-0 end-0 z-3">
-                <p class="fw-medium text-white fm-serif fs-md-4 fs-7">
+                <p class="fw-medium text-white fm-serif fs-md-4 fs-7 typewriter">
                   We have all your yachting requirements in hand. Together with
                   your captain and crew, we reduce the risk and increase the
                   enjoyment.
@@ -953,7 +953,6 @@
 
       function showImage(index) {
         partyImages.forEach((image, i) => {
-          console.log(image)
           if (i === index) {
             image.classList.add("active");
           } else {
@@ -963,7 +962,6 @@
       }
       function showFamilyImage(index) {
         familyImages.forEach((image, i) => {
-          console.log(image)
           if (i === index) {
             image.classList.add("active");
           } else {
@@ -973,13 +971,11 @@
       }
 
       function nextImage() {
-        console.log('currentIndex',currentIndex)
         currentIndex = (currentIndex + 1) % partyImages.length;
         showImage(currentIndex);
       }
 
       function nextfamilyImage() {
-        console.log('familyIndex',familyIndex)
         familyIndex = (familyIndex + 1) % familyImages.length;
         if (familyIndex === familyImages.length - 1) {
           isLastImage = true;
@@ -992,6 +988,27 @@
           nextfamilyImage();
         }
       }, 5000);
+    </script>
+    <script>
+      const text = "We have all your yachting requirements in hand. Together with your captain and crew, we reduce the risk and increase the enjoyment.";
+const typewriter = document.querySelector('.typewriter');
+
+function typeText() {
+    typewriter.textContent = ''; // 清空容器
+    let index = 0;
+
+    function addNextChar() {
+        typewriter.textContent += text[index];
+        index++;
+        if (index < text.length) {
+            setTimeout(addNextChar, 50); // 50毫秒后添加下一个字符
+        }
+    }
+
+    addNextChar();
+}
+
+typeText(); // 开始打字机效果
     </script>
   </body>
 </html>
