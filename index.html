@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>QUEEN LONG MARINE | CUSTOMIZATION</title>
-    <script type="module" crossorigin src="/Queen-Long-dev/assets/sail_single-b9f8f68c.js"></script>
-    <link rel="stylesheet" href="/Queen-Long-dev/assets/sail_single-ef770d33.css">
+    <script type="module" crossorigin src="/Queen-Long-dev/assets/sail_single-df04cf1e.js"></script>
+    <link rel="stylesheet" href="/Queen-Long-dev/assets/sail_single-ea9bcb73.css">
   </head>
 
   <body>
@@ -21,7 +21,7 @@
       xmlns="http://www.w3.org/2000/svg"
       id="圖層_1"
       version="1.1"
-      style="height: 100%; width: 100%; background: rgb(255, 255, 255)"
+      style="height: 100%; width: 100%;"
       width="200px"
       height="200px"
     >
@@ -80,7 +80,7 @@
               <path
                 fill="#77a4bd"
                 d="M90.181 73.425c-2.593 1.658-5.711 2.294-8.711 1.917a12.947 12.947 0 0 1-5.364-1.917l-.001.002-.1-.063-1.145-.667-1.239.747-.012-.019c-4.225 2.701-9.843 2.702-14.069.003l-.136-.083-1.136-.636-1.208.751-.022-.035c-4.226 2.702-9.847 2.702-14.075 0l-.001.002-.1-.063-1.145-.667-1.239.747-.012-.019c-4.225 2.701-9.843 2.702-14.069.003l-.136-.083-1.146-.634-1.209.73-.01-.016a12.957 12.957 0 0 1-5.364 1.918c-2.999.377-6.118-.26-8.711-1.918L7.5 77.053a17.33 17.33 0 0 0 9.357 2.744c.857 0 1.707-.071 2.547-.196a17.32 17.32 0 0 0 5.739-1.915 17.31 17.31 0 0 0 16.572 0 17.31 17.31 0 0 0 16.573 0 17.31 17.31 0 0 0 16.572 0 17.312 17.312 0 0 0 5.739 1.915c.84.125 1.69.196 2.547.196a17.33 17.33 0 0 0 9.357-2.744l-2.322-3.628z"
-                style="fill: rgb(119, 164, 189)"
+             
               ></path>
             </g>
           </g>
@@ -133,13 +133,12 @@
 <script>
   window.addEventListener("load", function () {
     const loadingContainer = document.querySelector(".loading-container");
-    const content = document.querySelector(".content");
 
     loadingContainer.style.opacity = "0";
 
     setTimeout(function () {
-      loadingContainer.style.display = "none";
-      // content.style.opacity = '1';
+     loadingContainer.style.display = "none";
+
     }, 1000);
   });
 </script>
@@ -373,7 +372,7 @@
                 Our Heritage
               </h3>
               <p
-                class="fs-5 fm-serif mb-0"
+                class="fs-5 fm-serif mb-0 position-absolute z-3"
                 style="
                   background-color: #fff6;
                   padding: 8px;
@@ -655,8 +654,13 @@
                   enjoyment.
                 </p>
                 <p
-                  class="fw-medium text-white fm-serif fs-md-4 fs-7 typewriter"
-                ></p>
+                  class="fw-medium text-white fm-serif fs-md-4 fs-7 "
+                  data-aos="fade-up"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-duration="1500"
+                >                  We have all your yachting requirements in hand. Together with
+                your captain and crew, we reduce the risk and increase the
+                enjoyment.</p>
               </div>
             </div>
           </div>
@@ -929,7 +933,7 @@
 <div class="navCtrl">
   <div class="logo-area">
     <div class="nav-logo nav-light">
-      <a href="#">
+      <a href="index.html">
         <img
           src="/Queen-Long-dev/assets/logo_4-c27161eb.png"
           style="width: 8vw !important; margin-top: 30px; height: unset"
@@ -937,7 +941,7 @@
     </div>
 
     <div class="nav-logo nav-derk">
-      <a href="#"><img src="/Queen-Long-dev/assets/logo_4_dark-d90a9d41.png" /></a>
+      <a href="index.html"><img src="/Queen-Long-dev/assets/logo_4_dark-d90a9d41.png" /></a>
     </div>
   </div>
 </div>
@@ -1119,11 +1123,23 @@
         showFamilyImage(familyIndex);
       }
       setInterval(nextImage, 5000);
-      setInterval(() => {
-        if (!isLastImage) {
-          nextfamilyImage();
-        }
-      }, 5000);
+      // setInterval(() => {
+      //   if (!isLastImage) {
+      //     nextfamilyImage();
+      //   }
+      // }, 5000);
+      $(document).ready(function() {
+
+  setTimeout(() => {
+    const intervalId = setInterval(() => {
+      if (!isLastImage) {
+        nextfamilyImage();
+      } else {
+        clearInterval(intervalId); 
+      }
+    }, 5000);
+  }, 5000); 
+});
     </script>
     <script>
       const fireWordEle = document.querySelector(".fire-word-hidden");
